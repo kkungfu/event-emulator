@@ -1,4 +1,4 @@
-use rdev::{listen, Event};
+use emulator::{listen, Event};
 
 fn main() {
     // This will block.

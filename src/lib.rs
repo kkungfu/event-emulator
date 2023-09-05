@@ -9,7 +9,7 @@
 //! # Listening to global events
 //!
 //! ```no_run
-//! use rdev::{listen, Event};
+//! use emulator::{listen, Event};
 //!
 //! // This will block.
 //! if let Err(error) = listen(callback) {
@@ -33,7 +33,7 @@
 //! The process needs to be granted access to the Accessibility API (ie. if you're running your process
 //! inside Terminal.app, then Terminal.app needs to be added in
 //! System Preferences > Security & Privacy > Privacy > Accessibility)
-//! If the process is not granted access to the Accessibility API, MacOS will silently ignore rdev's
+//! If the process is not granted access to the Accessibility API, MacOS will silently ignore emulator's
 //! `listen` calleback and will not trigger it with events. No error will be generated.
 //!
 //! ## Linux
@@ -42,7 +42,7 @@
 //! # Sending some events
 //!
 //! ```no_run
-//! use rdev::{simulate, Button, EventType, Key, SimulateError};
+//! use emulator::{simulate, Button, EventType, Key, SimulateError};
 //! use std::{thread, time};
 //!
 //! fn send(event_type: &EventType) {
@@ -80,7 +80,7 @@
 //! what key was interpreted by the OS at that time, it will respect the layout.
 //!
 //! ```no_run
-//! # use crate::rdev::EventType;
+//! # use crate::emulator::EventType;
 //! # use std::time::SystemTime;
 //! /// When events arrive from the system we can add some information
 //! /// time is when the event was received.
@@ -108,7 +108,7 @@
 //! still reject it).
 //!
 //! ```no_run
-//! # use crate::rdev::{Key, Button};
+//! # use crate::emulator::{Key, Button};
 //! /// In order to manage different OS, the current EventType choices is a mix&match
 //! /// to account for all possible events.
 //! #[derive(Debug)]
@@ -139,7 +139,7 @@
 //! # Getting the main screen size
 //!
 //! ```no_run
-//! use rdev::{display_size};
+//! use emulator::{display_size};
 //!
 //! let (w, h) = display_size().unwrap();
 //! assert!(w > 0);
@@ -158,7 +158,7 @@
 //! won't work.
 //!
 //! ```no_run
-//! use rdev::{Keyboard, EventType, Key, KeyboardState};
+//! use emulator::{Keyboard, EventType, Key, KeyboardState};
 //!
 //! let mut keyboard = Keyboard::new().unwrap();
 //! let string = keyboard.add(&EventType::KeyPress(Key::KeyS));
@@ -178,7 +178,7 @@
 //!
 //! ```no_run
 //! #[cfg(feature = "unstable_grab")]
-//! use rdev::{grab, Event, EventType, Key};
+//! use emulator::{grab, Event, EventType, Key};
 //!
 //! #[cfg(feature = "unstable_grab")]
 //! let callback = |event: Event| -> Option<Event> {
@@ -217,8 +217,8 @@
 //!
 //! Event data returned by the `listen` and `grab` functions can be serialized and de-serialized with
 //! Serde if you install this library with the `serialize` feature.
-mod rdev;
-pub use crate::rdev::{
+mod emulator;
+pub use crate::emulator::{
     Button, DisplayError, Event, EventType, GrabCallback, GrabError, Key, KeyboardState,
     ListenError, SimulateError,
 };
@@ -249,7 +249,7 @@ use crate::windows::{display_size as _display_size, listen as _listen, simulate 
 /// settings enabled.
 ///
 /// ```no_run
-/// use rdev::{listen, Event};
+/// use emulator::{listen, Event};
 ///
 /// fn callback(event: Event) {
 ///     println!("My callback {:?}", event);
@@ -275,7 +275,7 @@ where
 /// Sending some events
 ///
 /// ```no_run
-/// use rdev::{simulate, Button, EventType, Key, SimulateError};
+/// use emulator::{simulate, Button, EventType, Key, SimulateError};
 /// use std::{thread, time};
 ///
 /// fn send(event_type: &EventType) {
@@ -312,7 +312,7 @@ pub fn simulate(event_type: &EventType) -> Result<(), SimulateError> {
 /// This is useful to use with x, y from MouseMove Event.
 ///
 /// ```no_run
-/// use rdev::{display_size};
+/// use emulator::{display_size};
 ///
 /// let (w, h) = display_size().unwrap();
 /// println!("My screen size : {:?}x{:?}", w, h);
@@ -340,7 +340,7 @@ pub use crate::windows::grab as _grab;
 /// On Linux, you need rw access to evdev devices in /etc/input/ (usually group membership in `input` group is enough)
 ///
 /// ```no_run
-/// use rdev::{grab, Event, EventType, Key};
+/// use emulator::{grab, Event, EventType, Key};
 ///
 /// fn callback(event: Event) -> Option<Event> {
 ///     println!("My callback {:?}", event);

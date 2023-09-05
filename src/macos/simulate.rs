@@ -1,4 +1,4 @@
-use crate::rdev::{Button, EventType, SimulateError};
+use crate::emulator::{Button, EventType, SimulateError};
 use core_graphics::event::{
     CGEvent, CGEventTapLocation, CGEventType, CGMouseButton, ScrollEventUnit,
 };

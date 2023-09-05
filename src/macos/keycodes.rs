@@ -1,4 +1,4 @@
-use crate::rdev::Key;
+use crate::emulator::Key;
 use core_graphics::event::CGKeyCode;
 use std::convert::TryInto;
 

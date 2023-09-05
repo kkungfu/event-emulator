@@ -2,7 +2,7 @@ extern crate libc;
 extern crate x11;
 use crate::linux::common::{convert, FALSE, KEYBOARD};
 use crate::linux::keyboard::Keyboard;
-use crate::rdev::{Event, ListenError};
+use crate::emulator::{Event, ListenError};
 use std::convert::TryInto;
 use std::ffi::CStr;
 use std::os::raw::{c_char, c_int, c_uchar, c_uint, c_ulong};

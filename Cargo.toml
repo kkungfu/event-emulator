@@ -1,13 +1,13 @@
 [package]
-name = "rdev"
+name = "emulator"
 version = "0.5.3"
 authors = ["Nicolas Patry <patry.nicolas@protonmail.com>"]
 edition = "2018"
 
 description = "Listen and send keyboard and mouse events on Windows, Linux and MacOS."
-documentation = "https://docs.rs/rdev/"
-homepage = "https://github.com/Narsil/rdev"
-repository = "https://github.com/Narsil/rdev"
+documentation = "https://docs.rs/emulator/"
+homepage = "https://github.com/hirokimoto/emulator"
+repository = "https://github.com/hirokimoto/emulator"
 readme = "README.md"
 keywords = ["input", "mouse", "testing", "keyboard", "automation"]
 categories = ["development-tools::testing", "api-bindings", "hardware-support"]

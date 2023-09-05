@@ -1,6 +1,6 @@
 #![allow(clippy::upper_case_acronyms)]
 use crate::macos::keyboard::Keyboard;
-use crate::rdev::{Button, Event, EventType};
+use crate::emulator::{Button, Event, EventType};
 use cocoa::base::id;
 use core_graphics::event::{CGEvent, CGEventFlags, CGEventTapLocation, CGEventType, EventField};
 use lazy_static::lazy_static;

@@ -1,6 +1,6 @@
-![](https://github.com/Narsil/rdev/workflows/build/badge.svg)
-[![Crate](https://img.shields.io/crates/v/rdev.svg)](https://crates.io/crates/rdev)
-[![API](https://docs.rs/rdev/badge.svg)](https://docs.rs/rdev)
+![](https://github.com/hirokimoto/emulator/workflows/build/badge.svg)
+[![Crate](https://img.shields.io/crates/v/emulator.svg)](https://crates.io/crates/emulator)
+[![API](https://docs.rs/emulator/badge.svg)](https://docs.rs/emulator)
 
 # {{crate}}
 

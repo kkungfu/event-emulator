@@ -1,4 +1,4 @@
-use crate::rdev::Key;
+use crate::emulator::Key;
 use std::os::raw::c_uint;
 
 macro_rules! decl_keycodes {

@@ -1,4 +1,4 @@
-use crate::rdev::{Button, EventType};
+use crate::emulator::{Button, EventType};
 use crate::windows::keyboard::Keyboard;
 use crate::windows::keycodes::key_from_code;
 use lazy_static::lazy_static;

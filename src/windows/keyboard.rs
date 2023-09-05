@@ -1,4 +1,4 @@
-use crate::rdev::{EventType, Key, KeyboardState};
+use crate::emulator::{EventType, Key, KeyboardState};
 use crate::windows::common::{get_code, get_scan_code, FALSE, TRUE};
 use crate::windows::keycodes::code_from_key;
 use std::ptr::null_mut;

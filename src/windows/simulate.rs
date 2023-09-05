@@ -1,4 +1,4 @@
-use crate::rdev::{Button, EventType, SimulateError};
+use crate::emulator::{Button, EventType, SimulateError};
 use crate::windows::keycodes::code_from_key;
 use std::convert::TryFrom;
 use std::mem::size_of;

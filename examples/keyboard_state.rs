@@ -1,4 +1,4 @@
-use rdev::{EventType, Key, Keyboard, KeyboardState};
+use emulator::{EventType, Key, Keyboard, KeyboardState};
 
 fn main() {
     let mut keyboard = Keyboard::new().unwrap();

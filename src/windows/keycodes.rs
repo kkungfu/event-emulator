@@ -1,4 +1,4 @@
-use crate::rdev::Key;
+use crate::emulator::Key;
 use std::convert::TryInto;
 use winapi::shared::minwindef::WORD;
 

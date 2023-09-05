@@ -1,6 +1,6 @@
 #![allow(clippy::upper_case_acronyms)]
 use crate::macos::keycodes::code_from_key;
-use crate::rdev::{EventType, Key, KeyboardState};
+use crate::emulator::{EventType, Key, KeyboardState};
 use core_foundation::base::{CFRelease, OSStatus};
 use core_foundation::string::UniChar;
 use core_foundation_sys::data::{CFDataGetBytePtr, CFDataRef};

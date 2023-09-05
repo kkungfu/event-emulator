@@ -1,6 +1,6 @@
 #![allow(improper_ctypes_definitions)]
 use crate::macos::common::*;
-use crate::rdev::{Event, GrabError};
+use crate::emulator::{Event, GrabError};
 use cocoa::base::nil;
 use cocoa::foundation::NSAutoreleasePool;
 use core_graphics::event::{CGEventTapLocation, CGEventType};

@@ -1,5 +1,5 @@
 use lazy_static::lazy_static;
-use rdev::{grab, listen, simulate, Event, EventType, Key};
+use emulator::{grab, listen, simulate, Event, EventType, Key};
 use serial_test::serial;
 use std::error::Error;
 use std::sync::mpsc::{channel, Receiver, RecvTimeoutError, Sender};
